@@ -56,44 +56,38 @@ Overall quality control  → Skills (auto-invoked QA rules)
 ## 📁 Project Structure
 
 ```
-project-root/
-├── CLAUDE.md                          # Orchestrator (global context)
-├── .claude/
-│   ├── agents/                        # Subagent definitions
-│   │   ├── researcher.md
-│   │   ├── prd-writer.md
-│   │   ├── ia-strategist.md
-│   │   ├── wireframer.md
-│   │   ├── design-system-engineer.md
-│   │   ├── prototype-builder.md
-│   │   └── qa-reviewer.md
-│   ├── commands/                      # Slash Commands
-│   │   ├── kickoff.md                 # /kickoff — Start pipeline
-│   │   ├── research.md                # /research
-│   │   ├── prd.md                     # /prd
-│   │   ├── ia.md                      # /ia
-│   │   ├── wireframe.md               # /wireframe
-│   │   ├── prototype.md               # /prototype
-│   │   └── review.md                  # /review
-│   └── skills/                        # Auto-invocation Skills
-│       ├── quality-gate/
-│       │   └── SKILL.md
-│       └── design-conventions/
-│           └── SKILL.md
-├── templates/                         # Deliverable templates
+prd-to-prototype/                      # Plugin root
+├── .claude-plugin/
+│   ├── plugin.json                    # Plugin manifest
+│   └── marketplace.json               # Marketplace config
+├── agents/                            # Subagent definitions
+│   ├── researcher.md
+│   ├── prd-writer.md
+│   ├── ia-strategist.md
+│   ├── wireframer.md
+│   ├── design-system-engineer.md
+│   ├── prototype-builder.md
+│   └── qa-reviewer.md
+├── commands/                          # Slash Commands
+│   ├── kickoff.md                     # /kickoff — Initialize project
+│   ├── research.md                    # /research
+│   ├── prd.md                         # /prd
+│   ├── ia.md                          # /ia
+│   ├── wireframe.md                   # /wireframe
+│   ├── prototype.md                   # /prototype
+│   └── review.md                      # /review
+├── skills/                            # Auto-invocation Skills
+│   ├── quality-gate/
+│   │   └── SKILL.md
+│   └── design-conventions/
+│       └── SKILL.md
+├── templates/                         # Canonical deliverable templates
 │   ├── prd-template.md
 │   ├── persona-template.md
 │   ├── screen-inventory-template.md
 │   └── review-checklist.md
-├── outputs/                           # Per-Phase deliverables
-│   ├── 01-research/
-│   ├── 02-prd/
-│   ├── 03-ia/
-│   ├── 04-wireframe/
-│   ├── 05-design-system/
-│   └── 06-prototype/
-└── briefs/
-    └── product-brief.md
+├── CLAUDE.md
+└── README.md
 ```
 
 ---
@@ -101,18 +95,11 @@ project-root/
 ## 🛠 Installation
 
 ```bash
-# 1. Extract the archive into your project root
-tar xzf agent-pipeline-system.tar.gz
-
-# 2. Run the installer (renames claude-config → .claude)
-chmod +x install.sh && ./install.sh
-
-# 3. Verify
-ls -la .claude/
-# Should show: agents/  commands/  skills/
+# Install as a Claude Code plugin
+claude plugin add --marketplace github.com/RohTae/prd-to-prototype
 ```
 
-The archive ships `claude-config/` (visible folder) instead of `.claude/` (hidden folder) because most OS file explorers hide dot-prefixed directories. The `install.sh` script renames it to `.claude/` which Claude Code requires.
+After installation, open any project directory in Claude Code and run `/kickoff` to initialize the pipeline.
 
 ---
 
@@ -230,3 +217,15 @@ The most common failure mode is "insights from Phase 1 not reflected in Phase 4.
 - [Claude Code Agent Teams Docs](https://code.claude.com/docs/en/agent-teams)
 - [Claude Code Best Practices](https://code.claude.com/docs/en/best-practices)
 - [Claude Prompting Best Practices](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)
+
+---
+
+## 🤝 Contribution
+
+If you have suggestions, improvements, or new resources to add:
+
+1. Fork this repo
+2. Make your changes
+3. Submit a Pull Request
+
+You can also open an [Issue](https://github.com/RohTae/prd-to-prototype/issues) 🐛 if you spot something that needs fixing.
