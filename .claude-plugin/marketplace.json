@@ -1,0 +1,30 @@
+{
+  "name": "prd-to-prototype",
+  "version": "1.0.0",
+  "description": "AI agent pipeline that turns a product idea into a clickable prototype. 7 subagents, 7 commands, 2 auto-skills — from research to interactive prototype.",
+  "owner": {
+    "name": "RohTae"
+  },
+  "plugins": [
+    {
+      "name": "prd-to-prototype",
+      "source": "./",
+      "description": "AI agent pipeline that turns a product idea into a clickable prototype. Phases: Research → PRD → Information Architecture → Wireframes → Design System → Interactive Prototype.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Justin"
+      },
+      "keywords": [
+        "product-management",
+        "prd",
+        "wireframe",
+        "prototype",
+        "design-system",
+        "information-architecture",
+        "multi-agent",
+        "pipeline"
+      ],
+      "category": "product-management"
+    }
+  ]
+}
