@@ -1,0 +1,19 @@
+{
+  "name": "prd-to-prototype",
+  "version": "1.0.0",
+  "description": "AI agent pipeline that turns a product idea into a clickable prototype. Phases: Research → PRD → Information Architecture → Wireframes → Design System → Interactive Prototype.",
+  "author": {
+    "name": "Justin"
+  },
+  "keywords": [
+    "product-management",
+    "prd",
+    "wireframe",
+    "prototype",
+    "design-system",
+    "information-architecture",
+    "multi-agent",
+    "pipeline"
+  ],
+  "license": "MIT"
+}
