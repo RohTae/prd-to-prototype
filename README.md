@@ -228,4 +228,4 @@ If you have suggestions, improvements, or new resources to add:
 2. Make your changes
 3. Submit a Pull Request
 
-You can also open an [Issue](https://github.com/RohTae/prd-to-prototype/issues) 🐛 if you spot something that needs fixing.
+You can also open an [Issue](https://github.com/RohTae/prd-to-prototype/issues) if you find something that needs a fix.
